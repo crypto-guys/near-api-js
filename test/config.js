@@ -44,6 +44,13 @@ module.exports = function getConfig(env) {
             nodeUrl: 'https://rpc.ci-betanet.near.org',
             masterAccount: 'test.near',
         };
+    case 'guildnet':
+        return {
+            networkId: 'guildnet',
+            nodeUrl: 'https://rpc.openshards.io',
+            walletUrl: 'https://wallet.guildnet.near.org',
+            helperUrl: 'https://helper.openshards.io',
+        };
     default:
         throw Error(`Unconfigured environment '${env}'. Can be configured in src/config.js.`);
     }
